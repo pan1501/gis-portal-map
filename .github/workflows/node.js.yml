@@ -21,6 +21,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn build --if-present
-      - run: ssh -tt google.com
+      - run: ssh -tt -i ec2-user@52.64.119.196
         env:
           CI: true
