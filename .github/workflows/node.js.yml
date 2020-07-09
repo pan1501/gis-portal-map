@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: ssh -i ${{ secrets.SSH_KEY }} ec2-user@52.64.119.196
+      - run: ssh -i ${{ Secrets.SSH_KEY }} ec2-user@52.64.119.196
       - run: yarn
       - run: yarn build --if-present
       - run: ssh -tt localhost
